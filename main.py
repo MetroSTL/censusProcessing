@@ -19,12 +19,12 @@ def main():
     census_df = make_demog_vars(census_df, census_config)
     print(census_df)
 
-    # load the census geographies and prepare them
-        # need to clip using the service area and compute the ratio of each geo left over
-
-    # join the census data to the geographies
+    # load the census geographies and join
+        # ?? need to clip using the service area and compute the ratio of each geo left over
         # apply the ratio of geos leftover to the totals
-
+    census_gdf = build_geodata(census_df)
+    print(census_gdf.info(), census_gdf.head())
+    
     # save the shapefile
         # Where? metroas08? W:/R&D? AGOL/Enterprise?
 
